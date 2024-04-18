@@ -20,6 +20,15 @@ public class ChatLanguageModelProducer {
 
   @Produces
   public ChatLanguageModel chatLanguageModel() {
+
+    // ICI ON APPELLE ENCORE le chat model qui répond aux réponses. Là on dépend encore de 
+    // AZURE_OPENAI_URL=https://openai-proxy.thankfulforest-26a1f1e5.westeurope.azurecontainerapps.io/QDRANT_URL=http://localhost:6334
+//  qui est dans le .env
+
+    // Chercher dans la doc de langchain4j comment mettre le model ollama local de réponse au chat
+
+
+
     return AzureOpenAiChatModel.builder()
       .apiKey(azureOpenAiKey)
       .endpoint(azureOpenAiEndpoint)
